@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  redis:
+    image: redis:latest
+    container_name: oht-redis
+    ports:
+      - "6379:6379"
+    command: redis-server --requirepass "1234" # 보안을 위해 간단한 비밀번호 설정
